@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Swipe Your Cat!</title>
+  <link rel="preconnect" href="https://cataas.com">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Swipe Your Cat!</h1>
+    <div id="progress" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <!-- Card stack -->
+    <section id="deck" class="deck" aria-label="Cat pictures swipe deck"></section>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="btn-nope" class="btn btn-nope" aria-label="Dislike (Left)">
+        👎
+      </button>
+      <button id="btn-like" class="btn btn-like" aria-label="Like (Right)">
+        ❤️
+      </button>
+    </div>
+
+    <!-- Summary -->
+    <section id="summary" class="summary hidden" aria-live="polite">
+      <h2 tabindex="-1">Summary</h2>
+      <p>
+        You liked <strong id="like-count">0</strong> out of <span id="total-count">0</span> cats.
+      </p>
+      <div id="liked-grid" class="liked-grid"></div>
+      <button id="btn-restart" class="btn btn-restart">Restart</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>
+      Photos from <a href="https://cataas.com/" target="_blank" rel="noreferrer">Cataas</a>
+    </small>
+  </footer>
+
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
